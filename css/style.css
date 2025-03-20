@@ -116,3 +116,31 @@ footer a:hover {
     display: block;
   }
 }
+
+/* Tablet Viewport: Style rule for header */
+header {
+  position: static;
+  padding-bottom: 2%;
+}
+
+/* Tablet Viewport: Style rules for nav area */
+nav li {
+  border-top: none;
+  display: inline-block;
+  border-right: 1px solid #fff;
+}
+
+/* Style rule for last nav item */
+nav li:last-child {
+  border-right: none;
+}
+
+/* Style rules for nav links */
+nav li a {
+  padding: 0.1em 0.75em;
+}
+
+/* Tablet Viewport: Style rules for main content area */
+main ul {
+  margin: 0 0 4% 10%;
+}
