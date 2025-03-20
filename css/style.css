@@ -36,37 +36,47 @@ header {
   padding: 1em;
   background-color: #333;
   color: white;
+  text-align: center;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2em;
-  text-align: center;
+header img {
+  max-width: 200px; /* Adjust the size of your logo */
 }
 
 /* Navigation bar styling */
 nav {
+  background-color: #000; /* Set the navbar background to black */
   font-size: 1em;
   margin: 0;
+  position: relative;
 }
 
 nav ul {
   list-style: none;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  margin: 0;
 }
 
 nav li {
   display: inline-block;
-  border-right: 1px solid #fff;
+  margin-right: 20px;
 }
 
 nav li:last-child {
-  border-right: none;
+  margin-right: 0;
 }
 
 nav li a {
   padding: 0.5em 1em;
-  color: #007bff;
+  color: white; /* Set the nav links to white */
+  font-weight: bold; /* Make the nav links bold */
+  text-transform: uppercase;
+}
+
+nav li a:hover {
+  color: #ff5722; /* Optional: Add a hover effect color */
 }
 
 /* Footer */
@@ -104,7 +114,7 @@ footer {
 /* Media Queries */
 
 /* Tablet Viewport: Style rules for main content area */
-@media screen and (max-width: 768px), print {
+@media screen and (max-width: 768px){
   nav li {
     border-top: none;
     display: inline-block;
@@ -189,6 +199,8 @@ footer {
   }
 }
 
+background: linear-gradient(to right, #ccc, #fff);
+
 /* Main content area */
 main {
   clear: left;
@@ -257,7 +269,7 @@ main ul {
 }
 
 /* Tablet Viewport: Style rules for nav area */
-@media screen and (max-width: 768px), print {
+@media screen and (max-width: 768px){
   nav li {
     border-top: none;
     display: inline-block;
@@ -268,15 +280,7 @@ main ul {
     border-right: none;
   }
 
-  nav li a {
-    padding: 0.1em 0.75em;
-  }
-
-  main ul {
-    margin: 0 0 4% 10%;
-  }
-
-  #exercises {
-    clear: left;
+  nav li a:hover {
+    color: #000;
   }
 }
