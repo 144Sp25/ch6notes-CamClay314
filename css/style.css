@@ -1,156 +1,110 @@
-/* Reset some default styles */
-body, h1, h2, h3, h4, p, ul {
+/* Basic Styling */
+body {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-}
-
-/* Apply a basic font and spacing */
-body {
-  font-family: 'Roboto Slab', serif;
   background-color: #f4f4f4;
   color: #333;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5, h6 {
   color: #333;
-  margin-bottom: 0.5rem;
 }
 
-p {
-  margin-bottom: 1rem;
+a {
+  text-decoration: none;
+  color: #007bff;
 }
 
-/* Header */
+/* Mobile-specific styles */
+.mobile {
+  font-size: 1.5em;
+}
+
+.tel-num {
+  font-size: 1.25em;
+}
+
+.map {
+  width: 600px;
+  height: 450px;
+}
+
+/* Header styling */
 header {
-  background-color: #1d3557;
+  width: 100%;
+  padding: 1em;
+  background-color: #333;
   color: white;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
   text-align: center;
-  padding: 1rem;
 }
 
-header a img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Navigation */
+/* Navigation bar styling */
 nav {
-  background-color: #457b9d;
-  padding: 0.5rem;
+  font-size: 1em;
+  margin: 0;
 }
 
 nav ul {
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
+  list-style: none;
+  padding: 0;
 }
 
-nav ul li {
-  margin-right: 2rem;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-/* Main */
-main {
-  padding: 2rem;
-}
-
-/* Hero Image */
-#hero img {
-  width: 100%;
-  height: auto;
-  margin-bottom: 2rem;
-}
-
-/* Footer */
-footer {
-  background-color: #1d3557;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-}
-
-footer a {
-  color: white;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-/* Mobile-first responsive design */
-@media (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #contact iframe {
-    width: 100%;
-  }
-}
-
-/* Tablet Viewport: Show tablet-desktop class, hide mobile class */
-.tablet-desktop {
-  display: block;
-}
-
-.mobile {
-  display: none;
-}
-
-/* Tablet and Desktop Responsive Design */
-@media (min-width: 601px) {
-  .mobile {
-    display: none;
-  }
-
-  .tablet-desktop {
-    display: block;
-  }
-}
-
-/* Tablet Viewport: Style rule for header */
-header {
-  position: static;
-  padding-bottom: 2%;
-}
-
-/* Tablet Viewport: Style rules for nav area */
 nav li {
-  border-top: none;
   display: inline-block;
   border-right: 1px solid #fff;
 }
 
-/* Style rule for last nav item */
 nav li:last-child {
   border-right: none;
 }
 
-/* Style rules for nav links */
 nav li a {
-  padding: 0.1em 0.75em;
+  padding: 0.5em 1em;
+  color: #007bff;
 }
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Contact page styling */
+#contact {
+  padding: 2em;
+}
+
+#contact h2 {
+  font-size: 2em;
+}
+
+#contact p {
+  font-size: 1.2em;
+}
+
+#contact .tablet-desktop.tel-num {
+  font-size: 1.25em;
+}
+
+#contact .mobile.tel-num {
+  font-size: 1.5em;
+}
+
+/* Media Queries */
 
 /* Tablet Viewport: Style rules for main content area */
-main ul {
-  margin: 0 0 4% 10%;
-}
-
-/* Tablet Viewport: Additional style rules */
-@media (min-width: 601px) {
-  main {
-    padding: 3rem;
-  }
-
+@media screen and (max-width: 768px), print {
   nav li {
     border-top: none;
     display: inline-block;
@@ -165,22 +119,164 @@ main ul {
     padding: 0.1em 0.75em;
   }
 
+  main ul {
+    margin: 0 0 4% 10%;
+  }
+
   #exercises {
-    clear: none;
-    padding: 3rem;
+    clear: left;
   }
 }
-/* New style rule for .map */
-.map {
-  width: 600px;
-  height: 450px;
-}
-/* Media Query for Desktop Viewport */
-@media screen and (min-width: 769px) {
-  /* Desktop Viewport: Style rule for header */
+
+/* Desktop Viewport: Style rules for header */
+@media screen and (min-width: 1015px) {
   header {
     width: 25%;
     float: left;
     padding-bottom: 0;
+  }
+
+  nav {
+    float: right;
+    width: 70%;
+    margin: 4em 1em 0 0;
+  }
+
+  nav ul {
+    text-align: right;
+  }
+
+  nav li {
+    border: none;
+  }
+
+  nav li a {
+    padding: 0.5em 1em;
+  }
+
+  main {
+    clear: left;
+  }
+
+  main h1 {
+    font-size: 1.8em;
+  }
+
+  #weights, #cardio, #training {
+    width: 29%;
+    float: left;
+    margin: 0 2%;
+  }
+
+  #exercises {
+    clear: left;
+  }
+}
+
+/* Media Query for Large Desktop Viewports */
+@media screen and (min-width: 1921px) {
+  #container {
+    width: 1920px;
+    margin: 0 auto;
+  }
+}
+
+/* Media Query for Print */
+@media print {
+  body {
+    background-color: #fff;
+    color: #000;
+  }
+}
+
+/* Main content area */
+main {
+  clear: left;
+  padding: 2em;
+}
+
+main h1 {
+  font-size: 1.8em;
+}
+
+main ul {
+  margin: 0 0 4% 10%;
+}
+
+/* Contact styling */
+#contact {
+  padding: 2em;
+}
+
+#contact h2 {
+  font-size: 2em;
+}
+
+/* Exercises Layout */
+#weights, #cardio, #training {
+  width: 29%;
+  float: left;
+  margin: 0 2%;
+}
+
+#exercises {
+  clear: left;
+}
+
+/* Mobile Class */
+.mobile {
+  font-size: 1.5em;
+}
+
+.tel-num {
+  font-size: 1.25em;
+}
+
+/* Map styling */
+.map {
+  width: 600px;
+  height: 450px;
+}
+
+/* Specific exercise layout */
+#weights, #cardio, #training {
+  width: 29%;
+  float: left;
+  margin: 0 2%;
+}
+
+/* Exercises clearing */
+#exercises {
+  clear: left;
+}
+
+/* Container Styling */
+#container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Tablet Viewport: Style rules for nav area */
+@media screen and (max-width: 768px), print {
+  nav li {
+    border-top: none;
+    display: inline-block;
+    border-right: 1px solid #fff;
+  }
+
+  nav li:last-child {
+    border-right: none;
+  }
+
+  nav li a {
+    padding: 0.1em 0.75em;
+  }
+
+  main ul {
+    margin: 0 0 4% 10%;
+  }
+
+  #exercises {
+    clear: left;
   }
 }
