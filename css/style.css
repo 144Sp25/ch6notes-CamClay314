@@ -1,164 +1,118 @@
-/*
-Author: Diana Linville
-Date: 5-16-22
-File name: style.class*/
-/*CSS Reset */
-body, header, nav, main, footer, h1, div, img, ul {
+/* Reset some default styles */
+body, h1, h2, h3, h4, p, ul {
   margin: 0;
   padding: 0;
-  border: 0;
 }
 
-/* Style Rules for body and images */
+/* Apply a basic font and spacing */
 body {
-  background-color: #000;
+  font-family: 'Roboto Slab', serif;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
-img {
-  max-width: 100%;
-  display: block;
+h1, h2, h3, h4 {
+  color: #333;
+  margin-bottom: 0.5rem;
 }
 
-/* Style rules for mobile viewport */
-/* Style rule for header */
+p {
+  margin-bottom: 1rem;
+}
+
+/* Header */
 header {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  background-color: #000;
-  height: 190px;
+  background-color: #1d3557;
+  color: white;
+  text-align: center;
+  padding: 1rem;
 }
 
-header img {
-  margin: 0 auto;
+header a img {
+  max-width: 100%;
+  height: auto;
 }
 
-/* Style rules for navigation area */
+/* Navigation */
 nav {
-  padding: 1%;
-  margin-bottom: 1%;
+  background-color: #457b9d;
+  padding: 0.5rem;
 }
 
 nav ul {
   list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin-right: 2rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Main */
+main {
+  padding: 2rem;
+}
+
+/* Hero Image */
+#hero img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+/* Footer */
+footer {
+  background-color: #1d3557;
+  color: white;
   text-align: center;
+  padding: 1rem;
 }
 
-nav li {
-  font-size: 1.5em;
-  font-family: 'Francois One', sans-serif;
-  border-top: 1px solid #fff;
-}
-
-nav li a {
-  display: block;
-  color: #fff;
-  padding: 0.5em 1em;
+footer a {
+  color: white;
   text-decoration: none;
 }
 
-nav li:first-child {
-  border-top: none;
+footer a:hover {
+  text-decoration: underline;
 }
 
-/* Show mobile class, hid tablet-desktop class */
-.mobile {
+/* Mobile-first responsive design */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #contact iframe {
+    width: 100%;
+  }
+}
+
+/* Tablet Viewport: Show tablet-desktop class, hide mobile class */
+.tablet-desktop {
   display: block;
 }
 
-.tablet-desktop {
+.mobile {
   display: none;
 }
 
-/* Style rules for main content */
-main {
-  background-color: #fff;
-  padding: 2%;
-  font-size: 1.15em;
-  font-family: 'Roboto Slab', serif;
-}
+/* Tablet and Desktop Responsive Design */
+@media (min-width: 601px) {
+  .mobile {
+    display: none;
+  }
 
-.tel-link {
-  background-color: #404040;
-  padding: 2%;
-  margin: 0 auto;
-  width: 80%;
-  text-align: center;
-  border-radius: 5px;
+  .tablet-desktop {
+    display: block;
+  }
 }
-
-.tel-link a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.5em;
-  display: block;
-}
-
-.hours {
-  margin-left: 10%;
-}
-
-.action {
-  font-size: 1.35em;
-  color: #666600;
-  font-weight: bold;
-}
-
-.external-link {
-  color: #666600;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-/* Style rules for footer content */
-footer p {
-  font-size: 0.75em;
-  text-align: center;
-  color: #fff;
-  padding: 0 1em;
-}
-
-footer p a {
-  color: #fff;
-  text-decoration: none;
-}
-
-#weights, #cardio, #training {
-  margin: 0 2%;
-}
-
-.round {
-  border-radius: 8px;
-}
-
-#contact {
-  text-align: center;
-}
-
-#contact .contact-email-link {
-  color: #666600;
-  text-decoration: none;
-}
-
-.map {
-  border: 8px solid #000;
-  width: 95%;
-  height: 50%;
-}
-
-/*
-#exercises {
-  clear: left;
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
-  background-color: #f2f2f2;
-  padding: 1% 2%;
-}
-
-#exercises dt {
-  font-weight: bold;
-}
-
-#exercises dd {
-  padding: 0.5% 1% 2% 0;
-} */
